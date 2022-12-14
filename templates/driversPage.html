@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "kebseHTML.html" %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    Drivers
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <div class="container" style="padding-top: 10px; padding-bottom: 5px;">
+    {% for i in '0123456789'|make_list %}
+    <a href="/drivers/{{ i }}/"><img class="card-img-top" style="max-height: 75px; max-width: 100px" src="../../static/img/{{ i }}.gif" alt="Card image cap"></a>
+    {% endfor %}
+    </div>
+    <div class="card-group">
+    {% for el in drivers %}
+              <div class="card border-dark " style="border-radius: 0;">
+                    <div class="card-body">
+                        <h5 class="card-title">Number: {{ el.number }} </h5>
+                        <h5 class="card-title">Name: {{ el.name }} </h5>
+                        <h6 class="card-text">Team: {{ el.team }}</h6>
+                        <h6 class="card-text">Nationality: {{ el.nationality }}</h6>
+                        <h6 class="card-text">Born: {{ el.born }}</h6>
+                    </div>
+                    <img class="card-img-top" style="max-height: 39.3vh; max-width: 39.3vh" src="../../static/img/{{ el.number }}.png" alt="Card image cap">
+              </div>
+        {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="card-group">
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}
+</body>
+</html>

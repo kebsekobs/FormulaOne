@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "kebseHTML.html" %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    Schedule
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <ul class="list-group">
+    {% for el in schedule %}
+      <li class="list-group-item">Round: {{ el.round }} | Country: {{ el.country }} | Date: {{ el.date }} | Champion: {{ el.champion }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
+</body>
+</html>

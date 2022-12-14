@@ -1,0 +1,23 @@
+{% extends "kebseHTML.html" %}
+{% load crispy_forms_filters %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    Магазин
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <h1  style="text-align: center">СКОРО ЗДЕСЬ ЧТО-ТО БУДЕТ(ОЙ ЧТО БУДЕТ)</h1>
+    <form method="post"  style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%);">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <span>{{ error }}</span>
+        <button type="submit" class="btn btn-danger" style="position: fixed; left: 16%; margin-top: 3%; ">Добавить гонку</button>
+    </form>
+{% endblock %}
+</body>
+</html>

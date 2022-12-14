@@ -1,0 +1,51 @@
+h1 {
+       background: linear-gradient(to top, #FFC500, #CE0071);
+       text-align:center;
+       color: #ffffff;
+   }
+a:any-link
+{
+     color: #ffffff;
+     text-decoration:none;
+}
+footer {
+    float: bottom;
+    height: 15vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.forNavigation {
+       background: linear-gradient(to bottom, #FFC500, #CE0071);
+       text-align:center;
+       color: #ffffff;
+       font-size: 150%;
+
+
+   }
+.forLinks {
+    display: flex;
+  justify-content: space-between;
+       /*text-align:center;*/
+       color: #ffffff;
+       font-size: 100%;
+
+
+   }
+footer a:hover{
+
+    font-size: 160%;
+}
+a:hover{
+    color: #FFC500;
+}
+   mytext{
+       color: #ffffff;
+   }
+   footer{
+       background: linear-gradient(to top left, #000000, #f20000);
+   }
+header{
+    margin-bottom: auto;
+}
+

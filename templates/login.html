@@ -1,0 +1,24 @@
+{% extends "kebseHTML.html" %}
+{% load crispy_forms_filters %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    login
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <form method="post"  style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            {% csrf_token %}
+            {{ form|crispy }}
+{#            {% for f in form %}#}
+{#                <p><label class="form-label" for="{{ f.id_for_label }}">{{f.label}}: </label>{{ f }}</p>#}
+{#                <div class="form-error">{{ f.errors }}</div>#}
+{#            {% endfor %}#}
+        <button type="submit" class="btn btn-danger" style="position: fixed; left: 39%; margin-top: 3%;">Вход</button>
+    </form>
+{% endblock %}
+</body>
+</html>

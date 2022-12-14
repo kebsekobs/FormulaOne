@@ -1,0 +1,104 @@
+
+a:any-link
+{
+     color: #ffffff;
+     text-decoration:none;
+}
+footer {
+    float: bottom;
+    height: 15vh;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.forNavigation {
+       background: linear-gradient(to bottom, #FFC500, #CE0071);
+       text-align:center;
+       color: #ffffff;
+       font-size: 150%;
+
+
+   }
+.forLinks {
+    display: flex;
+  justify-content: space-between;
+       /*text-align:center;*/
+       color: #ffffff;
+       font-size: 100%;
+
+
+   }
+footer a:hover{
+
+    font-size: 160%;
+}
+a:hover{
+    color: #FFC500;
+}
+   mytext{
+       color: #ffffff;
+   }
+   footer{
+       background: linear-gradient(to top left, #000000, #f20000);
+   }
+ header{
+    float: top;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.btn-danger {
+        background-color: #FFFFFF;
+        color: #f20000;
+        border-color: #f20000;
+        border-radius: 25px;
+    }
+    .btn-danger:hover,
+    .btn-danger:focus,
+    .btn-danger:active {
+        background-color: #f20000;
+        color: #FFFFFF;
+        border-color: #f20000;
+    }
+.form-input {
+    width: 300px;
+    font-size: 16px;
+}
+
+.form-label {
+    display: inline-block;
+    min-width: 150px;
+    vertical-align: top;
+}
+
+.form-error ul {
+    list-style: none;
+    padding: 0;
+    color: #f20000;
+}
+
+.form-button {
+    min-width: 200px;
+    font-size: 16px;
+}
+
+.asteriskField {
+    display: none;
+}
+
+body{
+    background-image: url(../img/back1.jpg);
+    background-size: cover;
+}
+
+label{
+
+}
+
+form{text-align: center;
+}
+
+strong{
+    color: #f20000;
+}

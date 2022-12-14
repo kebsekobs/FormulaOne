@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "kebseHTML.html" %}
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    Points
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    <div class="card-group">
+    {% for el in statistics %}
+              <div class="card border-dark" style="border-radius: 0;">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Number: {{ el.number.number }} </h5>
+                        <h5 class="card-title">Name: {{ el.name }} </h5>
+                        <h6 class="card-text">Wins: {{ el.wins }}</h6>
+                        <h6 class="card-text">Points: {{ el.points }}</h6>
+                    </div>
+                    <img class="card-img-top" src="../static/img/{{ el.number.number }}.png" alt="Card image cap">
+              </div>
+        {% if forloop.counter|divisibleby:4 %}
+            </div>
+            <div class="card-group">
+         {% endif %}
+    {% endfor %}
+    </div>
+{% endblock %}
+</body>
+</html>
